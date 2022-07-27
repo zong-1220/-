@@ -9,11 +9,8 @@
 >* [中文詞向量教學影片](https://youtu.be/-ja07wQ03ak)
 >* [Notion](https://www.notion.so/fd77b1d4657041949d00d77dd3bd50af?v=c32de9689313428da76ff4de75046dcd)
 
-## 程式碼
->* [致股東報告書](https://drive.google.com/drive/folders/1CQiDQsKw3norHabgSLhomLEV-wy8S7hX)
->* [觀測站爬蟲資料](https://drive.google.com/drive/folders/1KQB-ibsMFNlw-8IkReZyGqPXZPLa4YpZ?usp=sharing)
->* [BERT](https://drive.google.com/drive/folders/1lW2zu482_MH6hSXmApizfrlyRio1vGCH?usp=sharing)
->* [中文詞向量](https://drive.google.com/drive/folders/1I09t9acD2XInjYdXAAZTz-JkVdQ6RxLE)
+## 程式碼使用說明
+# 辰瑜的論文
 
 ## 預計目標
 - [x] 8/23完成網頁製作並開好AWS的虛擬機
