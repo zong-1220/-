@@ -6,12 +6,74 @@
 >* [致股東報告書文字資訊與裁罰案件關聯性之研究](https://drive.google.com/drive/folders/1ARhnjCUnABHp8nlWtDXM2XkY-m3k9oAl?fbclid=IwAR2i73K55mbcELavKIKQuBZWFTIQyK6eLIU5ioCoQ3oC7wQM5lYJgmHe5xw)
 >* [公開觀測站](https://mops.twse.com.tw/mops/web/t57sb01_q5)
 >* [上市公司代碼一覽](https://www.tej.com.tw/webtej/doc/uid.htm?fbclid=IwAR2R_sYXIvO2I75X7HCGzeJgkXiQb6Jme8KajNvl128s2VkCDBmXVhMCgRo)
->* [中文詞向量教學影片](https://youtu.be/-ja07wQ03ak)
 >* [Notion](https://www.notion.so/fd77b1d4657041949d00d77dd3bd50af?v=c32de9689313428da76ff4de75046dcd)
 
 ## 程式碼使用說明
-### 辰瑜的論文
 
+### 觀測站
+>1. *年報爬取(下拉式選單*
+>    * 依照電腦設定不同 *table.exe* 可能會造成自動化修改檔名有錯，請下載 *Autoit* 做修改
+>    * [Autoit](https://www.796t.com/content/1544513614.html)
+>
+>1. *移動檔案*
+>    * 將下載的檔案移到對應已有的資料夾
+>
+>1. 將 *本機端list*
+>    * 找出結果不為pdf的檔案
+
+### 辰瑜的論文
+>1. 將所需至股東報告書放進資料夾
+>
+>1. 將至股東報告書放入 *頁碼部製作.ipynb*
+>    1. 生成 *頁碼簿.xlsx*
+>
+>1. 將 *頁碼簿* 放入 *paragraph_seperator_v1(修改).ipynb*
+>    * 生成 *頁碼簿_分段狀況.xlsx* (所有資料)
+>    * 生成 *頁碼簿_分段結果.xlsx* (1~4段皆有的檔案)
+>    
+>1. 其他
+>    * *paragraph_seperator_v1(原版).ipynb*
+>    * *文字檔分段.ipynb*
+
+### 中文詞向量
+>#### 自做語料庫模型
+>1. 先將所需文字(.txt)放入資料夾
+>
+>1. 使用 *製作語料模型.ipynb*
+>    * 生成 *corpus.txt* 和 *corpusSegDone.txt*(暫存檔案可不理會)
+>    * 生成自定義維度的模型 *word300.model*
+>    * [語料模型參數設定解說](https://www.youtube.com/watch?v=gBH1kocbfZI)
+
+>#### 維基百科語料庫模型
+>1. 至維基百科下載 *zhwiki-20220101-pages-articles-multistream.xml.bz2*
+>
+>1. 使用 *製作wiki模型.ipynb* (檔案很大一般須要跑很久)
+>    * 生成多項暫存可不理會
+>    * 生成自定義維度的模型 *wiki.model*
+
+>#### 歐式餘弦
+>1. *中文詞向量.ipynb*
+>    * 生成歐式和餘弦的csv檔
+>    * [中文詞向量教學影片](https://youtu.be/-ja07wQ03ak)
+>1. *四維製作.ipynb*
+>    * 將csv做成四維圖型
+>    * [四維散佈圖](https://youtu.be/ngUYXhXWrYw)
+>1. *歐式餘弦介紹.ipynb*
+
+### BERT
+>#### csv製作
+>* 將所有文字檔放入資料夾後當輸入
+>1. *csv製作.ipynb*
+>    * 輸出為欄位兩欄，字數不超過200。
+>1. *csv製作(2000字.ipynb*
+>    * 輸出為欄位兩欄，字數不超過2000。
+>1. *csv製作(2000字_單一.ipynb*
+>    * 輸出為欄位一欄，字數不超過2000。
+>1. *句子512.ipynb*
+>    * 將做好的csv檔丟入並將句子切到字數小於512
+>#### Bert實作
+>1. *金融BERT(最終版.ipynb*
+>    * 輸入為 *512_all.csv*
 ## 預計目標
 - [x] 8/23完成網頁製作並開好AWS的虛擬機
 - [x] 9/6寫完資料爬蟲和複製雲端硬碟
