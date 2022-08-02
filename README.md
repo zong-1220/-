@@ -8,22 +8,6 @@
 >* [上市公司代碼一覽](https://www.tej.com.tw/webtej/doc/uid.htm?fbclid=IwAR2R_sYXIvO2I75X7HCGzeJgkXiQb6Jme8KajNvl128s2VkCDBmXVhMCgRo)
 >* [Notion](https://www.notion.so/fd77b1d4657041949d00d77dd3bd50af?v=c32de9689313428da76ff4de75046dcd)
 
-## 程式碼使用說明
-
-### 觀測站
->1. *年報爬取(下拉式選單*
->    * 依照電腦設定不同 *table.exe* 可能會造成自動化修改檔名有錯，請下載 *Autoit* 做修改
->    * [Autoit](https://www.796t.com/content/1544513614.html)
->
->1. *移動檔案*
->    * 將下載的檔案移到對應已有的資料夾
->
->1. 將 *本機端list*
->    * 找出結果不為pdf的檔案
-
-
-
-
 
 
 ## 預計目標
